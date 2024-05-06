@@ -14,7 +14,8 @@ services:
       - "3000:3000"
     networks:
       - loki
-
+    volumes:
+      - ./grafana-data:/var/lib/grafana
   rabbitmq:
     image: 'rabbitmq:management'
     ports:
